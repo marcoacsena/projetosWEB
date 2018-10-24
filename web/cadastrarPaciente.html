@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cadastrar Paciente</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="crud.css">
+    </head>
+    
+    <body>
+        
+       <h1>Cadastro de Paciente</h1>
+       <h3>Por gentileza, preencher os dados do paciente a seguir:</h3> 
+       
+       <div id="form">
+            <form method="post" action="crud">
+                <fieldset><legend>Dados do Paciente</legend>
+                <p><a>*</a>Campos de preenchimento obrigatório</p>
+                Nome<a>*</a>: <input type="text" name="pacNome" required><br><br>
+                Celular<a>*</a>: <input type="text" name="celMen" required><br><br>
+                CPF<a>*</a>: <input type="text" name="pacCpf" required><br><br>
+                <input type="submit" value = "Cadastrar Paciente">
+                <input type="reset" value="Limpar Dados">
+           
+                </fieldset>
+            </form>
+            <br>
+           </div>
+            
+    <footer>                
+        &copy; Desenvolvido por Luciane Benetti e Marco Sena.
+    </footer>    
+                
+    </body>   
+    
+</html>
