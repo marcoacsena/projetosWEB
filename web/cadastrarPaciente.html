@@ -19,16 +19,18 @@ and open the template in the editor.
        
        <div id="form">
             <form method="post" action="crud">
+                
                 <fieldset><legend>Dados do Paciente</legend>
                 <p><a>*</a>Campos de preenchimento obrigatório</p>
                 Nome<a>*</a>: <input type="text" name="pacNome" required><br><br>
                 Celular<a>*</a>: <input type="text" name="celMen" required><br><br>
                 CPF<a>*</a>: <input type="text" name="pacCpf" required><br><br>
-                <input type="submit" value = "Cadastrar Paciente">
-                <input type="reset" value="Limpar Dados">
+                <input type="submit" value = "Cadastrar Paciente">                
            
                 </fieldset>
             </form>
+           <br><br>
+           <input type="button" value = "Retornar para a Página Principal do SISTEMA AVICENA" onclick="history.go(-1)">
             <br>
            </div>
             

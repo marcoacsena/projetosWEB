@@ -1,5 +1,6 @@
 package model.bo;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.dao.PacienteDAO;
 import model.vo.PacienteVO;
@@ -9,10 +10,12 @@ import model.vo.PacienteVO;
  * @author Marco
  */
 public class PacienteBO {
+    
+    PacienteDAO pacienteDAO = new PacienteDAO();
 
     public int cadastrarPacienteBO(PacienteVO pacienteVO) {
         
-        PacienteDAO pacienteDAO = new PacienteDAO();
+        
         int novoId;
         
         if(pacienteDAO.consultarPacientePorCpf(pacienteVO.getCpf()) != null){
@@ -26,6 +29,14 @@ public class PacienteBO {
             }
                
         return novoId;
+    }
+
+    public ArrayList listarTodosOsPacientesBO() {
+        
+        ArrayList listaDePacientes;
+        
+        listaDePacientes = pacienteDAO.listarTodosOsPacientes();
+        return listaDePacientes;
     }
    
     

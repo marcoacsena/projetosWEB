@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import model.vo.PacienteVO;
 
 /**
@@ -101,4 +102,34 @@ public class PacienteDAO {
     
     }
     
+    	public ArrayList<PacienteVO> listarTodosOsPacientes() {
+
+	 ArrayList <PacienteVO> listaDePacientes = new ArrayList<PacienteVO>();	
+         PacienteVO pacienteVO = null;
+           
+         String query = "select * from paciente";
+               
+
+		Connection conn = Banco.getConnection();
+		PreparedStatement prepStmt = Banco.getPreparedStatement(conn, query);
+		try {
+			ResultSet result = prepStmt.executeQuery();
+
+			while (result.next()) {
+				pacienteVO = new PacienteVO();
+
+				pacienteVO.setPacCod(result.getInt(1));
+				pacienteVO.setPacNome(result.getString(2));
+				pacienteVO.setCelMen(result.getString(3));
+				pacienteVO.setCpf(result.getString("cpf"));
+						
+				listaDePacientes.add(pacienteVO);
+			}
+
+		} catch (SQLException e) {
+		}
+		return listaDePacientes;
+	}
+
+        
 }
