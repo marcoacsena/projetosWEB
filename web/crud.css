@@ -11,5 +11,17 @@ a{
 	background-color:lightblue;
 }
 
+td,th {
+        
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 6px;
+    }   
+    
+    tr:nth-child(even){background-color: beige;}
+    tr:nth-child(odd){background-color: burlywood;}
+    
+    
+    
 footer{color: #59A5D8; text-align: center; margin-top: 150px;}	
 

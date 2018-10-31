@@ -19,9 +19,9 @@ public class PacienteController {
         return novoId;
     }
 
-    public ArrayList listarTodosOsPacientesContoller() {
+    public ArrayList<PacienteVO> listarTodosOsPacientesContoller() {
         
-        ArrayList listaDePacientes;
+        ArrayList<PacienteVO> listaDePacientes;
         
         listaDePacientes = pacienteBO.listarTodosOsPacientesBO();
         return listaDePacientes;

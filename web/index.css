@@ -3,7 +3,7 @@
     Author     : Marco
 */
 
-*{margin: 0; padding: 5px;}
+
 header {width:1600px; height: 60px; margin-left: 0px; margin-bottom:40px;}
 nav {width: 100%; height: 40px; padding: 0px;background-color:cadetblue;font-family: "Arial" sans-serif;}
 nav ul li{list-style: none; margin-right: -11px; position: relative;}
@@ -34,4 +34,7 @@ h1{clear: left;margin-top: 200px;text-align: center;}
 p{text-align: center;   
 }
 
-footer{background-color:cadetblue; text-align: center; padding: 10px; margin-top: 200px;}
+html, body{
+    height: 100%;
+}
+footer{background-color:cadetblue; text-align: center; padding: 10px; margin-top: 200px; margin-bottom: 0px; bottom: 0px ; position: fixed;  width: 100% }
