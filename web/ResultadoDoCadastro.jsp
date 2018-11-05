@@ -16,10 +16,10 @@
         <h1>Resultado do Cadastro!</h1>
         
         <div id="form">
-            <form method="post" action="crud">
+            <form method="post">
                 <fieldset><legend>Dados Cadastrados do Paciente</legend>
                
-                    Identificador: <input type="text" size="30" value="<%=request.getAttribute("Identificador")%>"><br><br>
+                    Identificador: <input type="text" size="30" value="<%=request.getAttribute("identificador")%>"><br><br>
                     Nome: <input type="text" size="30" value="<%=request.getAttribute("nome")%>"><br><br>
                     Celular: <input type="text" size="30" value="<%=request.getAttribute("celMen")%>"><br><br>
                     CPF: <input type="text" size="30" value="<%=request.getAttribute("CPF")%>"><br><br>                                  
@@ -27,7 +27,7 @@
                 </fieldset>
                     
                     <br>
-                          <input type="button" value = "Retornar para a Página Principal" onclick="history.go(-2)">
+                          <input type="button" value = "Retornar para a Página Principal do sistema AVICENA" onclick="history.go(-2)">
             </form>
             <br>
         </div>

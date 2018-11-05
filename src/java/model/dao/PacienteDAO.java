@@ -18,18 +18,18 @@ public class PacienteDAO {
        
         int novoId = 0;
 
-		String sql = "INSERT INTO paciente (pacNome, celMen,  cpf)  VALUES (?,?,?)";
+		String sql = "INSERT INTO paciente (nomePaciente, celMensagemPaciente,  cpfPaciente)  VALUES (?,?,?)";
 //foneRes, foneCom, email, cnpj,logradouro, numLog, complemento, bairro, cidade, uf, cep
 		Connection conn = Banco.getConnection();
 		PreparedStatement prepStmt = Banco.getPreparedStatement(conn, sql, Statement.RETURN_GENERATED_KEYS);
 
 		try {
-			prepStmt.setString(1, pacienteVO.getPacNome());
-			prepStmt.setString(2, pacienteVO.getCelMen());
+			prepStmt.setString(1, pacienteVO.getNomePaciente());
+			prepStmt.setString(2, pacienteVO.getCelMensagemPaciente());
 			//prepStmt.setString(3, paciente.getFoneRes());
 			//prepStmt.setString(4, paciente.getFoneCom());
 			//prepStmt.setString(5, paciente.getEmail());
-			prepStmt.setString(3, pacienteVO.getCpf());
+			prepStmt.setString(3, pacienteVO.getCpfPaciente());
 			//prepStmt.setString(7, pacienteVO.getCnpj());
 			//prepStmt.setString(8, pacienteVO.getLogradouro());
 			//prepStmt.setString(9, pacienteVO.getNumLog());
@@ -61,7 +61,7 @@ public class PacienteDAO {
     
     public PacienteVO consultarPacientePorCpf(String cpf){
     
-    		String query = "SELECT * from paciente where cpf = ?";
+    		String query = "SELECT * from paciente where cpfPaciente = ?";
 
 		Connection conn = Banco.getConnection();
 		PreparedStatement prepStmt = Banco.getPreparedStatement(conn, query);                
@@ -74,13 +74,13 @@ public class PacienteDAO {
 			while (result.next()) {
 				pacienteVO = new PacienteVO();
                                 
-				pacienteVO.setPacCod(result.getInt("pacCod"));
-				pacienteVO.setPacNome(result.getString("pacNome"));
-				pacienteVO.setCelMen(result.getString("celMen"));
+				pacienteVO.setCodigoPaciente(result.getInt("codidoPaciente"));
+				pacienteVO.setNomePaciente(result.getString("nomePaciente"));
+				pacienteVO.setCelMensagemPaciente(result.getString("celMensagemPaciente"));
 //				pacienteVO.setFoneRes(result.getString(4));
 //				pacienteVO.setFoneCom(result.getString(5));
 //				pacienteVO.setEmail(result.getString(6));
-				pacienteVO.setCpf(result.getString("cpf"));
+				pacienteVO.setCpfPaciente(result.getString("cpfPaciente"));
 //				pacienteVO.setCnpj(result.getString(8));
 //				pacienteVO.setLogradouro(result.getString(9));
 //				pacienteVO.setNumLog(result.getString(10));
@@ -118,10 +118,10 @@ public class PacienteDAO {
 			while (result.next()) {
 				pacienteVO = new PacienteVO();
 
-				pacienteVO.setPacCod(result.getInt(1));
-				pacienteVO.setPacNome(result.getString(2));
-				pacienteVO.setCelMen(result.getString(3));
-				pacienteVO.setCpf(result.getString("cpf"));
+				pacienteVO.setCodigoPaciente(result.getInt(1));
+				pacienteVO.setNomePaciente(result.getString(2));
+				pacienteVO.setCelMensagemPaciente(result.getString(3));
+				pacienteVO.setCpfPaciente(result.getString("cpfPaciente"));
 						
 				listaDePacientes.add(pacienteVO);
 			}

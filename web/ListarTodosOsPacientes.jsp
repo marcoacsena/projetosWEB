@@ -32,16 +32,19 @@
                         {%>                                            
                     
                        <tr>
-                        <td><%= pacienteVO.getPacCod() %></td>
-                        <td><%= pacienteVO.getPacNome()%></td>
-                        <td><%= pacienteVO.getCelMen()%></td>
-                        <td><%= pacienteVO.getCpf()%></td>
+                        <td><%= pacienteVO.getCodigoPaciente()%></td>
+                        <td><%= pacienteVO.getNomePaciente()%></td>
+                        <td><%= pacienteVO.getCelMensagemPaciente()%></td>
+                        <td><%= pacienteVO.getCpfPaciente()%></td>
                        </tr>                   
            
                     <%
                       }
                     %>
-                   </table>                                 
+                   </table> 
+                   
+                   <br>
+                          <input type="button" value = "Retornar para a Página Principal do sistema AVICENA" onclick="history.go(-2)">
              
  </body>
 </html>

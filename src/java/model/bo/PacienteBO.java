@@ -18,12 +18,11 @@ public class PacienteBO {
         
         int novoId;
         
-        if(pacienteDAO.consultarPacientePorCpf(pacienteVO.getCpf()) != null){
+        if(pacienteDAO.consultarPacientePorCpf(pacienteVO.getCpfPaciente()) != null){
             
            novoId = 0;
 
-        } else{
-          
+        } else{          
             novoId = PacienteDAO.cadastrarPaciente(pacienteVO);
                       
             }

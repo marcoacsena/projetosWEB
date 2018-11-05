@@ -1,27 +1,19 @@
-/* 
-    Created on : 21/10/2018, 11:33:01
-    Author     : Marco
-*/
+html, body{ height: 100%;}
 
 
-header {width:1600px; height: 60px; margin-left: 0px; margin-bottom:40px;}
-nav {width: 100%; height: 40px; padding: 0px;background-color:cadetblue;font-family: "Arial" sans-serif;}
-nav ul li{list-style: none; margin-right: -11px; position: relative;}
+header {width:100%; height: 60px; margin-left: 0px; margin-bottom:40px;}
+nav {width: 100%; height: 40px; padding: -10px; background-color:cadetblue;font-family: "Arial" sans-serif;}
+nav ul li{list-style: none; margin-top: 7px; margin-right: 0px; margin-left: -20px; position: relative;float: left;}
 
-nav ul li{width: 150px; float: left;}
-
-nav ul li ul li{list-style: none; padding: 5px; margin-top: -9.9px; margin-left: -10px; position: relative; }
-
-nav a{
-    padding: 0px;
-    display: block;
-    text-decoration: none;
-    text-align: center; 
-    background-color:aquamarine;
+nav ul li a {width: 190px; padding: 2px; display: block; text-decoration: none; text-align: center; background-color:aquamarine;
     color:black;
     font-size: 18px;
-    border: 1px solid darkgray;    
-}
+    border: 1px solid darkgray;
+    margin-top: 2px;}
+
+nav ul li ul li{list-style: none; padding: 2px; margin-top: -4.5px; margin-left: -42px; position: relative; }
+
+nav ul li ul li a {width: 181px; padding: 2px; margin-bottom: -2px;}
 
 nav ul li a:hover{background-color:aqua;}
 
@@ -30,11 +22,9 @@ nav ul li ul{visibility: hidden; position: absolute;}
 nav ul li:hover ul{visibility: visible;}
 
 h1{clear: left;margin-top: 200px;text-align: center;}
+h3 {text-align: center;}
 
-p{text-align: center;   
+p{text-align: left;   
 }
 
-html, body{
-    height: 100%;
-}
-footer{background-color:cadetblue; text-align: center; padding: 10px; margin-top: 200px; margin-bottom: 0px; bottom: 0px ; position: fixed;  width: 100% }
+footer{width: 100%; background-color:cadetblue; text-align: center; padding: 8px; margin-top: 200px; margin-left: -1%; bottom: 0px ; position: fixed;}

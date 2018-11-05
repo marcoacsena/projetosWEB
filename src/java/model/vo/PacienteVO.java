@@ -6,16 +6,16 @@ package model.vo;
  */
 public class PacienteVO {
     
-    private int pacCod;
-    private String pacNome;
-    private String celMen;
-    private String foneRes;
-    private String foneCom; 
-    private String email;
-    private String cpf;
-    private String cnpj;
+    private int codigoPaciente;
+    private String nomePaciente;
+    private String celMensagemPaciente;
+    private String foneResidencial;
+    private String foneComercial; 
+    private String emailPaciente;
+    private String cpfPaciente;
+    private String cnpjPaciente;
     private String logradouro;
-    private String numLog;
+    private String numLogradouro;
     private String complemento;
     private String bairro;
     private String cidade;
@@ -25,17 +25,17 @@ public class PacienteVO {
     public PacienteVO() {
     }
 
-    public PacienteVO(int pacCod, String pacNome, String celMen, String foneRes, String foneCom, String email, String cpf, String cnpj, String logradouro, String numLog, String complemento, String bairro, String cidade, String uf, String cep) {
-        this.pacCod = pacCod;
-        this.pacNome = pacNome;
-        this.celMen = celMen;
-        this.foneRes = foneRes;
-        this.foneCom = foneCom;
-        this.email = email;
-        this.cpf = cpf;
-        this.cnpj = cnpj;
+    public PacienteVO(int CodigoPaciente, String NomePaciente, String celMensagemPaciente, String foneResidencial, String foneComercial, String emailPaciente, String cpfPaciente, String cnpjPaciente, String logradouro, String numLogradouro, String complemento, String bairro, String cidade, String uf, String cep) {
+        this.codigoPaciente = CodigoPaciente;
+        this.nomePaciente = NomePaciente;
+        this.celMensagemPaciente = celMensagemPaciente;
+        this.foneResidencial = foneResidencial;
+        this.foneComercial = foneComercial;
+        this.emailPaciente = emailPaciente;
+        this.cpfPaciente = cpfPaciente;
+        this.cnpjPaciente = cnpjPaciente;
         this.logradouro = logradouro;
-        this.numLog = numLog;
+        this.numLogradouro = numLogradouro;
         this.complemento = complemento;
         this.bairro = bairro;
         this.cidade = cidade;
@@ -43,68 +43,68 @@ public class PacienteVO {
         this.cep = cep;
     }
 
-    public int getPacCod() {
-        return pacCod;
+    public int getCodigoPaciente() {
+        return codigoPaciente;
     }
 
-    public void setPacCod(int pacCod) {
-        this.pacCod = pacCod;
+    public void setCodigoPaciente(int CodigoPaciente) {
+        this.codigoPaciente = CodigoPaciente;
     }
 
-    public String getPacNome() {
-        return pacNome;
+    public String getNomePaciente() {
+        return nomePaciente;
     }
 
-    public void setPacNome(String pacNome) {
-        this.pacNome = pacNome;
+    public void setNomePaciente(String NomePaciente) {
+        this.nomePaciente = NomePaciente;
     }
 
-    public String getCelMen() {
-        return celMen;
+    public String getCelMensagemPaciente() {
+        return celMensagemPaciente;
     }
 
-    public void setCelMen(String celMen) {
-        this.celMen = celMen;
+    public void setCelMensagemPaciente(String celMensagemPaciente) {
+        this.celMensagemPaciente = celMensagemPaciente;
     }
 
-    public String getFoneRes() {
-        return foneRes;
+    public String getFoneResidencial() {
+        return foneResidencial;
     }
 
-    public void setFoneRes(String foneRes) {
-        this.foneRes = foneRes;
+    public void setFoneResidencial(String foneResidencial) {
+        this.foneResidencial = foneResidencial;
     }
 
-    public String getFoneCom() {
-        return foneCom;
+    public String getFoneComercial() {
+        return foneComercial;
     }
 
-    public void setFoneCom(String foneCom) {
-        this.foneCom = foneCom;
+    public void setFoneComercial(String foneComercial) {
+        this.foneComercial = foneComercial;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmailPaciente() {
+        return emailPaciente;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmailPaciente(String emailPaciente) {
+        this.emailPaciente = emailPaciente;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCpfPaciente() {
+        return cpfPaciente;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpfPaciente(String cpfPaciente) {
+        this.cpfPaciente = cpfPaciente;
     }
 
-    public String getCnpj() {
-        return cnpj;
+    public String getCnpjPaciente() {
+        return cnpjPaciente;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setCnpjPaciente(String cnpjPaciente) {
+        this.cnpjPaciente = cnpjPaciente;
     }
 
     public String getLogradouro() {
@@ -115,12 +115,12 @@ public class PacienteVO {
         this.logradouro = logradouro;
     }
 
-    public String getNumLog() {
-        return numLog;
+    public String getNumLogradouro() {
+        return numLogradouro;
     }
 
-    public void setNumLog(String numLog) {
-        this.numLog = numLog;
+    public void setNumLogradouro(String numLogradouro) {
+        this.numLogradouro = numLogradouro;
     }
 
     public String getComplemento() {
@@ -162,13 +162,12 @@ public class PacienteVO {
     public void setCep(String cep) {
         this.cep = cep;
     }
-
     
 
     @Override
     public String toString() {
-        return "Código do paciente: " + pacCod + ", Nome do paciente: " + pacNome + ", Celular do Paciente: "
-                + celMen + ", CPF: " + cpf;
+        return "Código do paciente: " + codigoPaciente + ", Nome do paciente: " + nomePaciente + ", Celular do Paciente: "
+                + celMensagemPaciente + ", CPF: " + cpfPaciente;
     }	
     
 }
