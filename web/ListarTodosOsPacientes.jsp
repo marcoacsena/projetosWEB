@@ -13,7 +13,7 @@
         <title>Listar Todos Os Pacientes</title>
     </head>
     <body>
-        <h1>Lista dos pacientes cadastrados</h1><br><br>        
+        <h1>Lista dos pacientes cadastrados na clínica AVICENA</h1><br><br>        
         
        <table>
            <tr>
