@@ -102,7 +102,7 @@ public class PacienteDAO {
     
     }
     
-    	public ArrayList<PacienteVO> listarTodosOsPacientes() {
+    public ArrayList<PacienteVO> listarTodosOsPacientes() {
 
 	 ArrayList <PacienteVO> listaDePacientes = new ArrayList<PacienteVO>();	
          PacienteVO pacienteVO = null;
@@ -131,5 +131,62 @@ public class PacienteDAO {
 		return listaDePacientes;
 	}
 
+      
+    public static boolean excluirPaciente(String cpf) {
+       	
+        String sql = "delete from paciente where cpfPaciente = ? ";
+	
+        Connection conn = Banco.getConnection();		
+        PreparedStatement prepStmt = Banco.getPreparedStatement(conn, sql);
+
+            Boolean delacao = false;
+		try {
+                    
+                    prepStmt.setString(1, cpf);					
+                    int codigoRetorno = prepStmt.executeUpdate();
+                        
+                       if(codigoRetorno == 1) {
+                        delacao = true;
+                       }
+						
+		} catch (SQLException e) {
+			System.out.println("Erro ao Excluir o paciente! Causa: \n: " + e.getMessage());
+
+		} finally {
+			Banco.closePreparedStatement(prepStmt);
+			Banco.closeConnection(conn);
+		}
+		return delacao;        
+    }    
+
+    public boolean alterarPacienteDAO(PacienteVO pacienteVO) {
+        
+        Boolean alteracao = false;
+        String sql = "update paciente set nomePaciente = ?, celMensagemPaciente = ? where = ?)";
+        
+         Connection conn = Banco.getConnection();		
+        PreparedStatement prepStmt = Banco.getPreparedStatement(conn, sql);
+        
+        try {
+			
+			prepStmt.setString(1, pacienteVO.getNomePaciente());
+			prepStmt.setString(2,  pacienteVO.getCelMensagemPaciente());
+                        prepStmt.setString(3, pacienteVO.getCpfPaciente());
+
+			int codigoRetorno = prepStmt.executeUpdate();
+
+			if(codigoRetorno == 1){				
+				
+				alteracao = true;				
+			}
+         }catch (SQLException e) {
+			System.out.println("Erro ao executar a ATUALIZAÇÃO do Paciente! Causa: \n: " + e.getMessage());
+		}finally {
+			Banco.closePreparedStatement(prepStmt);
+			Banco.closeConnection(conn);
+		}
+        
+        return alteracao;
+    }
         
 }

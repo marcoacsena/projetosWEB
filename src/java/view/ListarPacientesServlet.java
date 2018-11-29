@@ -14,7 +14,7 @@ import model.vo.PacienteVO;
  *
  * @author Marco
  */
-@WebServlet("/pacientes")
+@WebServlet("/listarTodospacientes")
 public class ListarPacientesServlet extends HttpServlet {
 
     PacienteVO pacienteVO = new PacienteVO();  

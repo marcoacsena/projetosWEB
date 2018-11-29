@@ -26,5 +26,18 @@ public class PacienteController {
         listaDePacientes = pacienteBO.listarTodosOsPacientesBO();
         return listaDePacientes;
     }
+
+    public Boolean excluirPacienteController(String cpf) {        
+        
+        PacienteBO pacienteBO = new PacienteBO();
+                
+        return  pacienteBO.excluirPaciente(cpf);
+    }
+
+    public Boolean alterarPacienteController(PacienteVO pacienteVO) {
+        PacienteBO pacienteBO = new PacienteBO();
+                
+        return  pacienteBO.alterarPacienteBO(pacienteVO);
+    }
     
 }

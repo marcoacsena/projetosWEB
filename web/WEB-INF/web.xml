@@ -4,9 +4,25 @@
         <servlet-name>crud</servlet-name>
         <servlet-class>view.crud</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>excluirPacienteServlet</servlet-name>
+        <servlet-class>view.excluirPacienteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>alterarPaciente</servlet-name>
+        <servlet-class>view.alterarPacienteServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>crud</servlet-name>
-        <url-pattern>/crud</url-pattern>
+        <url-pattern>/cadastrar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>excluirPacienteServlet</servlet-name>
+        <url-pattern>/excluirPaciente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>alterarPaciente</servlet-name>
+        <url-pattern>/alterarPaciente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

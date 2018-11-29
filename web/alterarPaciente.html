@@ -6,38 +6,37 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Cadastrar Paciente</title>
+        <title>Alterar Dados de Paciente</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="crud.css">
     </head>
-    
     <body>
-        
-       <h1>Cadastro de Paciente</h1>
-       <h3>Por gentileza, preencher os dados do paciente a cadastrado:</h3> 
-       
-       <div id="form">
-            <form method="post" action="cadastrar">
+        <h1>Alterar Dados de Paciente</h1>
+        <h3>Digite o CPF para identificar o Paciente. Em seguida, informe os dados a serem atualizados:</h3>
+        <div>            
+            <form method="post" action="alterarPaciente">
                 
                 <fieldset><legend>Dados do Paciente</legend>
                 <p><a>*</a>Campos de preenchimento obrigatório</p>
+                CPF<a>*</a>: <input type="text" name="cpfPaciente" required><br><br>
                 Nome<a>*</a>: <input type="text" name="nomePaciente" required><br><br>
                 Celular<a>*</a>: <input type="text" name="celMen" required><br><br>
-                CPF<a>*</a>: <input type="text" name="cpfPaciente" required><br><br>
-                <input type="submit" value = "Cadastrar Paciente">                
+                
+                <input type="submit" value = "Alterar Paciente">                
            
                 </fieldset>
             </form>
            <br><br>
            <input type="button" value = "Retornar para a Página Principal do SISTEMA AVICENA" onclick="history.go(-1)">
-            <br>
-        </div>
+            <br>   
             
-    <footer>                
-        &copy; Desenvolvido por Luciane Benetti e Marco Sena.
-    </footer>    
+        </div>
+        
+<footer>
                 
-    </body>   
-    
+    &copy; Desenvolvido por Luciane Benetti e Marco Sena.
+</footer>        
+       
+</body>
 </html>

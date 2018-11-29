@@ -14,8 +14,6 @@ public class PacienteBO {
     PacienteDAO pacienteDAO = new PacienteDAO();
 
     public int cadastrarPacienteBO(PacienteVO pacienteVO) {
-        
-        
         int novoId;
         
         if(pacienteDAO.consultarPacientePorCpf(pacienteVO.getCpfPaciente()) != null){
@@ -37,6 +35,30 @@ public class PacienteBO {
         listaDePacientes = pacienteDAO.listarTodosOsPacientes();
         return listaDePacientes;
     }
+
+    public boolean excluirPaciente(String cpf) {
+        Boolean delacao = false;
+        
+        if(pacienteDAO.excluirPaciente (cpf)){
+            
+           delacao = true;
+        } 
+        
+        return delacao;
+    }
+
+    public Boolean alterarPacienteBO(PacienteVO pacienteVO) {
+        Boolean alteracao = false;
+        
+        if(pacienteDAO.alterarPacienteDAO(pacienteVO)){
+            
+           alteracao = true;
+        } 
+        
+        return alteracao;
+    }
+
+    
    
     
 }

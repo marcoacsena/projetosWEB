@@ -24,15 +24,15 @@
                     Celular: <input type="text" size="30" value="<%=request.getAttribute("celMen")%>"><br><br>
                     CPF: <input type="text" size="30" value="<%=request.getAttribute("CPF")%>"><br><br>                                  
            
-                </fieldset>
-                    
-                    <br>
+                </fieldset><br>
                           <input type="button" value = "Retornar para a Página Principal do sistema AVICENA" onclick="history.go(-2)">
             </form>
             <br>
         </div>
         
+        <footer>                
+        &copy; Desenvolvido por Luciane Benetti e Marco Sena.
+        </footer>
         
-        
-    </body>
+ </body>
 </html>
