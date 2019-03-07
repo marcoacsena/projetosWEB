@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="crud.css">
         <title>Erro no Cadastro</title>
     </head>
     <body>        
@@ -22,5 +23,9 @@
         
         <br><br> 
         <input type="button" value = "Retornar para a Página Principal do SISTEMA AVICENA" onclick="history.go(-2)">
-    </body>
+
+<footer>                
+        &copy; Desenvolvido por Luciane Benetti e Marco Sena.
+</footer>
+</body>  
 </html>

@@ -1,4 +1,5 @@
-<%@page import="model.vo.PacienteVO"%>
+
+<%@page import="appavicena.model.vo.PacienteVO"%>
 <%@page import="java.sql.Array"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
@@ -46,5 +47,8 @@
                    <br>
                           <input type="button" value = "Retornar para a Página Principal do sistema AVICENA" onclick="history.go(-2)">
              
- </body>
+<footer>                
+        &copy; Desenvolvido por Luciane Benetti e Marco Sena.
+</footer> 
+</body>
 </html>

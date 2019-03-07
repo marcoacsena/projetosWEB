@@ -30,9 +30,9 @@
             <br>
         </div>
         
-        <footer>                
-        &copy; Desenvolvido por Luciane Benetti e Marco Sena.
-        </footer>
+<footer>                
+    &copy; Desenvolvido por Luciane Benetti e Marco Sena.
+</footer>
         
  </body>
 </html>

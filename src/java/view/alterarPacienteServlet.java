@@ -5,14 +5,13 @@
  */
 package view;
 
-import Controller.PacienteController;
+import appavicena.Controller.PacienteController;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.vo.PacienteVO;
+import appavicena.model.vo.PacienteVO;
 
 /**
  *
@@ -35,9 +34,9 @@ public class alterarPacienteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
-   pacienteVO.setCpfPaciente(request.getParameter("cpfPaciente"));
-   pacienteVO.setNomePaciente(request.getParameter("nomePaciente"));
-   pacienteVO.setNomePaciente(request.getParameter("celMen"));
+        pacienteVO.setCpfPaciente(request.getParameter("cpfPaciente"));
+        pacienteVO.setNomePaciente(request.getParameter("nomePaciente"));
+        pacienteVO.setCelMensagemPaciente(request.getParameter("celMen"));
         
         PacienteController pacienteController = new PacienteController();
                
@@ -45,12 +44,12 @@ public class alterarPacienteServlet extends HttpServlet {
 
         if(alteracao){
            request.setAttribute("cpf", pacienteVO.getCpfPaciente());
-           request.setAttribute("nomeAlterado", pacienteVO.getCpfPaciente());
-           request.setAttribute("celularAlterado", pacienteVO.getCpfPaciente());
+           request.setAttribute("nomeAlterado", pacienteVO.getNomePaciente());
+           request.setAttribute("celularAlterado", pacienteVO.getCelMensagemPaciente());
            request.getRequestDispatcher("resultadoDaAlteracao.jsp").forward(request, response);
             
         }else {
-           request.getRequestDispatcher("erroNaalteracao.jsp").forward(request, response);
+           request.getRequestDispatcher("erroNaAlteracao.jsp").forward(request, response);
         
         }
 

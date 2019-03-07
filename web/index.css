@@ -24,7 +24,6 @@ nav ul li:hover ul{visibility: visible;}
 h1{clear: left;margin-top: 200px;text-align: center;}
 h3 {text-align: center;}
 
-p{text-align: left;   
-}
+p{text-align: left;}
 
 footer{width: 100%; background-color:cadetblue; text-align: center; padding: 8px; margin-top: 200px; margin-left: -1%; bottom: 0px ; position: fixed;}

@@ -23,5 +23,5 @@ td,th {
     
     
     
-footer{color: #59A5D8; text-align: center; margin-top: 150px;}	
+footer{width: 100%; background-color:cadetblue; text-align: center; padding: 8px; margin-top: 200px; margin-left: -1%; bottom: 0px ; position: fixed;}
 
